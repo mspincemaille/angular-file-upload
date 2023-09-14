@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { EventService } from '../services/event.service';
 
 @Component({
   selector: 'file-list-item',
@@ -6,5 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./file-list-item.component.css']
 })
 export class FileListItemComponent {
-  @Input() file: any = {}
+  @Input() file: any = File;
+
+  constructor(private esrvc: EventService) {}
+
+  removeFile(name:String) {
+    this.esrvc.deleteFile(name);
+  }
 }
