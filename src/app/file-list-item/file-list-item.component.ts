@@ -11,7 +11,7 @@ export class FileListItemComponent {
 
   constructor(private esrvc: EventService) {}
 
-  removeFile(name:String) {
+  deleteFile(name:String) {
     this.esrvc.deleteFile(name);
   }
 }
