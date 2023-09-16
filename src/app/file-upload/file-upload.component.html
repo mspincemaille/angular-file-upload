@@ -1,2 +1,2 @@
-<file-selector (onFilesHandled)="setFiles($event)"></file-selector>
+<file-selector (onHandleFiles)="setFiles($event)" (onHandleSubmit)="uploadFiles()"></file-selector>
 <file-list [files]="files"></file-list>

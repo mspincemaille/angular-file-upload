@@ -6,11 +6,16 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./file-selector.component.css']
 })
 export class FileSelectorComponent {
-  @Output() onFilesHandled = new EventEmitter<any>();
+  @Output() onHandleFiles = new EventEmitter<any>();
+  @Output() onHandleSubmit = new EventEmitter<any>();
 
   handleFiles(event: Event) {
     const target = event.target as HTMLInputElement;
     const files = Array.from(target.files as ArrayLike<File>);
-    this.onFilesHandled.emit(files)
+    this.onHandleFiles.emit(files)
+  }
+
+  handleSubmit() {
+    this.onHandleSubmit.emit();
   }
 }
