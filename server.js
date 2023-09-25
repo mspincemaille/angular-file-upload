@@ -1,18 +1,19 @@
 const express = require('express');
 const cors = require('cors');
+const efu = require('express-fileupload');
 
 const app = express();
-const PORT = 3000;
+const LOCAL_PORT = 3000;
 
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded());
+app.use(efu());
 
 app.post('/upload',(req, res) => {
-    console.log(req.body);
+    console.log(req.files);
+    res.send(req.files);
 });
 
-app.listen(PORT, () => {
-    console.log('Server listening on port ' + PORT);
+app.listen(LOCAL_PORT, () => {
+    console.log('Server listening on port ' + LOCAL_PORT);
 })
 

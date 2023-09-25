@@ -10,7 +10,8 @@ export class APIService {
 
     upload(files: Array<File>) {
         const formData = new FormData();
-        formData.append('files', JSON.stringify(files));
+        for(let file of files) formData.append('file', file as any);
+        
         return this.http.post(this.API_URI_DOMAIN + '/upload', formData);
     }
 }
