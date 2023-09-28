@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { FileListComponent } from './file-list/file-list.component';
 import { FileListItemComponent } from './file-list-item/file-list-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FileListItemComponent } from './file-list-item/file-list-item.component
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
