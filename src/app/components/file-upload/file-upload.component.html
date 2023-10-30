@@ -1,4 +1,6 @@
-<file-list [files]="files"></file-list>
-<file-selector [multiple]="multiple" [allowedFiles]="allowedFiles" (onHandleFiles)="setFiles($event)"
-    (onHandleSubmit)="uploadFiles()">
-</file-selector>
+<div class="upload-wrapper">
+    <file-list [files]="files"></file-list>
+    <file-selector [multiple]="multiple" [allowedFiles]="allowedFiles" (onHandleFiles)="setFiles($event)"
+        (onHandleSubmit)="uploadFiles()">
+    </file-selector>
+</div>
