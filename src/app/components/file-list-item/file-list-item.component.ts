@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { EventService } from '../services/event.service';
+import { EventService } from '../../services/event.service';
 
 @Component({
   selector: 'file-list-item',

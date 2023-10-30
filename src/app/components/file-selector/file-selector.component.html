@@ -1,0 +1,10 @@
+<form (submit)="handleSubmit()">
+    <div class="file-area">
+        <input 
+        [multiple]="multiple === '' ? true : null" 
+        [accept]="allowedFiles.toString()"
+        type="file" 
+        (change)="handleFiles($event)">
+    </div>
+    <button mat-raised-button color="primary" type="submit">Upload</button>
+</form>

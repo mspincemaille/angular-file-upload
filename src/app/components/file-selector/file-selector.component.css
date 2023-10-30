@@ -1,0 +1,7 @@
+form {
+    max-width: 350px;
+}
+form > button {
+    margin-top: 6px;
+    width: 100%;
+}
